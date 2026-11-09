@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": {
+    "title": "DRISHTI — See Beyond Data",
+    "slug": "drishti",
+    "short_description": "An Agentic Data Intelligence Platform for financial stock-volume analysis, anomaly detection, sector intelligence and AI-assisted insights using IBM Db2.",
+    "category": "AI / Data Engineering / Analytics",
+    "demo_url": "",
+    "video_url": "",
+    "repo_url": "https://github.com/harsh4687techie-bot/IBM_Db2_TechX_Project_Submission"
+  },
+  "team": {
+    "name": "DRISHTI",
+    "members": [
+      {
+        "name": "Harshvardhan Shinde",
+        "github": "harsh4687techie-bot",
+        "email": "harsh4687.techie@gmail.com",
+        "role": "Backend / AI Developer"
+      }
+    ]
+  },
+  "ibm_db2": {
+    "edition": "IBM Db2 Community Edition (Docker)",
+    "connector": "Python Db2 connector (exact package to be verified)",
+    "features_used": [
+      "Relational Database Operations",
+      "Financial Data Storage and Retrieval",
+      "Database-backed Analytical Workflows"
+    ]
+  },
+  "tech_stack": {
+    "languages": [
+      "Python",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "frameworks": [
+      "FastAPI",
+      "React",
+      "Vite"
+    ],
+    "ai_models": [
+      "Google Gemini API (model to be verified)"
+    ]
+  }
+}
