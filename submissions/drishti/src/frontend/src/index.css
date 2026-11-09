@@ -1,0 +1,358 @@
+/* ==========================================================================
+   DRISHTI — INSTITUTIONAL MONOCHROME DESIGN SYSTEM
+   Inspired by luxury Swiss editorial design & institutional financial terminals
+   ========================================================================== */
+
+:root {
+  /* Strict Monochromatic Color Palette */
+  --bg-main: #090909;
+  --bg-secondary: #101010;
+  --bg-card: #141414;
+  --bg-surface: #191919;
+  --bg-elevated: #1C1C1C;
+  --bg-hover: #222222;
+
+  --border-main: #292929;
+  --border-subtle: #202020;
+  --border-active: #4A4A4A;
+  --border-focus: #FFFFFF;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --text-muted: #707070;
+  --text-faint: #444444;
+
+  --divider: #252525;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  font-feature-settings: "tnum";
+}
+
+/* Monochromatic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3A3A3A;
+}
+
+/* Core Layout Containers */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+}
+
+.content-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 24px 32px;
+}
+
+/* Institutional Grid Utilities */
+.grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.grid-cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-cols-3 { grid-template-columns: 1fr; }
+  .content-wrapper { padding: 20px; }
+}
+
+@media (max-width: 680px) {
+  .grid-cols-4 { grid-template-columns: 1fr; }
+  .grid-cols-2 { grid-template-columns: 1fr; }
+  .content-wrapper { padding: 16px; }
+}
+
+/* Institutional Flat Surface Cards (Zero Gradient, Zero Glow) */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-main);
+  border-radius: 4px;
+  padding: 24px;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: #383838;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.metric-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-main);
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.15s ease;
+}
+
+.metric-card:hover {
+  border-color: #383838;
+}
+
+.metric-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.metric-value {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: "tnum";
+  letter-spacing: -0.02em;
+}
+
+.metric-subtext {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+/* Monochromatic Delta Indicators */
+.delta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: "tnum";
+  border: 1px solid var(--border-main);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+.delta-neutral {
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+/* Monochromatic Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: none;
+  line-height: 1.2;
+}
+
+.btn-primary {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #FFFFFF;
+}
+.btn-primary:hover {
+  background-color: #E5E5E5;
+  border-color: #E5E5E5;
+}
+.btn-primary:active {
+  background-color: #CCCCCC;
+}
+
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-main);
+}
+.btn-secondary:hover {
+  background-color: var(--bg-surface);
+  border-color: #404040;
+}
+.btn-secondary:active {
+  background-color: #222222;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+}
+.btn-ghost:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+/* Institutional Data Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+}
+
+.data-table th {
+  padding: 12px 16px;
+  background-color: var(--bg-secondary);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--border-main);
+}
+
+.data-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-feature-settings: "tnum";
+}
+
+.data-table tr:hover td {
+  background-color: var(--bg-surface);
+}
+
+/* Monochromatic Severity Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.badge-critical {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+
+.badge-high {
+  background-color: #161616;
+  color: #E0E0E0;
+  border: 1px solid #757575;
+}
+
+.badge-medium {
+  background-color: #121212;
+  color: #A0A0A0;
+  border: 1px solid #383838;
+}
+
+.badge-low {
+  background-color: #0E0E0E;
+  color: #707070;
+  border: 1px solid #252525;
+}
+
+/* Monochromatic Input Fields */
+input, select, textarea {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-main);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 13px;
+  transition: border-color 0.15s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #666666;
+}
+
+/* Section Header Styles */
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.section-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}

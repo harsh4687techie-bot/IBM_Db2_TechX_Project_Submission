@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <!-- DRISHTI Institutional Monochromatic Mark (Geometric D with Optical Aperture) -->
+  <rect width="64" height="64" rx="12" fill="#090909" />
+  <rect x="0.5" y="0.5" width="63" height="63" rx="11.5" stroke="#292929" />
+  <!-- Left Vertical Spine (Db2 Institutional Anchor) -->
+  <path d="M16 14 H25 V50 H16 Z" fill="#FFFFFF" />
+  <!-- Outer D Curve -->
+  <path d="M25 14 H35 C44.94 14 53 22.06 53 32 C53 41.94 44.94 50 35 50 H25 V42 H35 C40.52 42 45 37.52 45 32 C45 26.48 40.52 22 35 22 H25 V14 Z" fill="#FFFFFF" />
+  <!-- Inner Optical Focus Core (Vision / Drishti Iris) -->
+  <circle cx="35" cy="32" r="4.5" fill="#FFFFFF" />
+</svg>
